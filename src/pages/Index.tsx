@@ -236,13 +236,13 @@ export default function Index() {
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/40 backdrop-blur-md border border-border text-md font-medium text-foreground mb-8">
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-              خصم لفترة محدودة على دبلومة الـ Fundamentals عدد ساعات الكورس +120
+              خصم لفترة محدودة على دبلومة الـ AI عدد ساعات الكورس +120
             </span>
             <h1
               className="text-[31px] md:text-7xl lg:text-[70px] font-black mb-6 leading-[1.1] tracking-tight"
               style={{ lineHeight: "1.5" }}
             >
-              <span className="text-foreground">Learn Programming From Zero To Hero</span>{" "}
+              <span className="text-foreground">Learn AI From Zero To Hero</span>{" "}
               {/* <span className="text-gradient">Data Analysis</span> */}
               {/* <br /> */}
               {/* <span className="text-foreground">من الصفر</span> */}
@@ -296,7 +296,6 @@ export default function Index() {
               },
               {
                 title: "Build Strong Basics",
-                // desc: " أو أى مجال تانى من مجالات البرمجة Web , Mobile , AI , Cyber Security أساس قوى يخليك تدخل بعدة أى مجال زى ",
                 desc: "أساس قوى يخليك تدخل بعدة أى مجال زى الويب أو الموبايل أو الذكاء الإصطناعى أو الأمن السيبرانى أو أى مجال تانى من مجالات البرمجة",
               },
               {
