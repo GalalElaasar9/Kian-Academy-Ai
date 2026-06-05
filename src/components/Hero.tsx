@@ -16,7 +16,7 @@ export default function Hero() {
         <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-primary/20 blur-[120px]" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-accent/15 blur-[120px]" />
 
-        <div className="relative z-10 text-center max-w-4xl mx-auto py-20">
+        <div className="relative z-10 text-center max-w-4xl mx-auto py-0 md:py-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -55,7 +55,7 @@ export default function Hero() {
                   transition={{ delay: 0.3 + i * 0.1 }}
                   className="text-center"
                 >
-                  <div className="text-3xl md:text-4xl font-black text-gradient mb-1">
+                  <div className="text-2xl md:text-4xl font-black text-gradient mb-1">
                     {s.value}
                   </div>
                   <div className="text-xs md:text-sm text-muted-foreground uppercase tracking-wider">

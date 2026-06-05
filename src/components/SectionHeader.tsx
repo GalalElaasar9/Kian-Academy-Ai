@@ -18,7 +18,7 @@ export default function SectionHeader({
         ""
       )}
 
-      <h2 className="text-3xl md:text-4xl font-black mb-4 text-foreground tracking-tight">
+      <h2 className="text-2xl md:text-4xl font-black mb-4 text-foreground tracking-tight">
         {title}
       </h2>
       {subtitle && <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{subtitle}</p>}

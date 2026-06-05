@@ -47,7 +47,7 @@ export default function WhoIsThisFor() {
 
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-4xl font-bold mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold mb-4">
             Who Is This Course For?
           </h2>
           <p className="text-muted-foreground">
