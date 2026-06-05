@@ -4,24 +4,43 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faqData = [
   {
-    title: "هل الكورس مناسب للمبتدئين ؟",
-    content:
-      "أيوه، الكورس معمول مخصوص لأي شخص بيبدأ من الصفر بدون أي خبرة.",
+    title: "هل الكورس مناسب للمبتدئين؟",
+    content: "أيوة، الكورس بيبدأ من الصفر خطوة بخطوة بدون أي خبرة سابقة.",
   },
   {
-    title: "هل الكورس عملى ؟",
+    title: "محتاج أكون بعرف برمجة؟",
     content:
-      "أيوه، الكورس فيه تطبيقات وتمارين ومشاريع عملية أثناء الشرح.",
+      "يفضل يكون عندك أساسيات بسيطة، لكن هنساعدك تفهم كل حاجة أثناء الكورس من البداية.",
   },
   {
-    title: "هل أقدر أتعلم أي Track بعد الكورس ؟",
+    title: "هل فيه مشاريع عملية؟",
     content:
-      "أيوه، بعد ما تخلص الـ Fundamentals تقدر تدخل أي مجال زي Front-End أو Back-End أو Flutter أو AI وغيرهم.",
+      "أكيد، جزء كبير من الكورس قائم على التطبيق العملي والمشاريع الحقيقية.",
   },
   {
-    title: "هل يوجد شهادة؟",
+    title: "هتعلم أعمل Chatbots؟",
     content:
-      "أيوه، بيتم منح Certificate بعد إتمام الكورس.",
+      "أيوة، وهتتعلم كمان تبني AI Assistants وتستخدم APIs مختلفة لبناء تطبيقات ذكية.",
+  },
+  {
+    title: "هل المجال مطلوب؟",
+    content:
+      "جداً، الطلب على مجال الذكاء الاصطناعي و Data Science بيزيد بشكل مستمر في كل العالم.",
+  },
+  {
+    title: "محتاج جهاز قوي؟",
+    content:
+      "لا، معظم الأدوات اللي هنستخدمها تشتغل على أجهزة متوسطة بدون أي مشاكل.",
+  },
+  {
+    title: "هل فيه شهادة؟",
+    content:
+      "أيوة، هتحصل على Certificate بعد إتمام الكورس بالكامل.",
+  },
+  {
+    title: "أقدر أشتغل Freelance بعد الكورس؟",
+    content:
+      "أكيد، هتكون عندك مشاريع قوية تساعدك تبدأ تعرض خدماتك على منصات العمل الحر.",
   },
 ];
 
@@ -33,14 +52,11 @@ export default function Accordion() {
   };
 
   return (
-    <div
-      dir="rtl"
-      className="mx-auto max-w-2xl space-y-4"
-    >
-      {faqData.map((item, index) => (
+      <div dir="rtl" className="grid grid-cols-1 md:grid-cols-2 gap-3 w-full max-w-5xl mx-auto">
+        {faqData.map((item, index) => (
         <div
           key={index}
-          className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md"
+          className="h-fit overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md"
         >
           <button
             onClick={() => toggleAccordion(index)}

@@ -1,17 +1,22 @@
 import { motion } from "framer-motion";
+import {
+  Sigma,
+  SlidersHorizontal,
+  BarChart3,
+  Bot,
+  Network,
+  MessageSquareCode,
+  Eye,
+  Sparkles,
+  Cpu,
+  Cloud,
+  Rocket,
+} from "lucide-react";
 
 import { SubscribeButton } from "@/components/SubscribeButton";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { CountdownTimer } from "@/components/CountdownTimer";
-import opinion from "@/assets/Testimonials/opinion.jpeg";
-import opinion2 from "@/assets/Testimonials/opinion2.jpeg";
-import opinion3 from "@/assets/Testimonials/opinion3.jpeg";
-import opinion4 from "@/assets/Testimonials/opinion4.jpeg";
-import opinion5 from "@/assets/Testimonials/opinion5.jpeg";
-import opinion6 from "@/assets/Testimonials/opinion6.jpeg";
-import opinion7 from "@/assets/Testimonials/opinion7.jpeg";
-import opinion8 from "@/assets/Testimonials/opinion8.jpeg";
-import opinion9 from "@/assets/Testimonials/opinion9.jpeg";
+
 import Projects from "@/components/Projects";
 
 // Project 1
@@ -23,8 +28,6 @@ import subImage4 from "@/assets/Project_1/image_4.jpeg";
 import subImage5 from "@/assets/Project_1/image_5.jpeg";
 import subImage6 from "@/assets/Project_1/image_6.jpeg";
 import subImage7 from "@/assets/Project_1/image_7.jpeg";
-import subImage8 from "@/assets/Project_1/image_8.jpeg";
-import subImage9 from "@/assets/Project_1/image_9.jpeg";
 
 
 // Project 2
@@ -35,117 +38,115 @@ import subImageProject_2 from "@/assets/Project_2/image_1.jpeg";
 import mainImageProject_3 from "@/assets/Project_3/main-image-project_3.jpeg";
 import subImageProject_3 from "@/assets/Project_3/image_1.jpeg";
 import Accordion from "@/components/Accordion";
+import Features from "@/components/Features";
+import Hero from "@/components/Hero";
+import Career from "@/components/Career";
+import SectionHeader from "@/components/SectionHeader";
+import Section from "@/components/Section";
+import Testimonials from "@/components/Testimonials";
+import ProjectWillBuild from "@/components/ProjectsWillBuild";
+import Tools from "@/components/Tools";
+import WhoIsThisFor from "@/components/WhoIsThisFor";
+
+const whyLearn = [
+  {
+    id:"01",
+    title: "Future-Proof Skill 🤖",
+    desc: "الذكاء الاصطناعي بقى داخل في كل حاجة تقريبًا، والطلب على الناس اللي فاهمة AI  بيزيد كل يوم.",
+  },
+  {
+    id:"02",
+    title: "Work Smarter ⚡",
+    desc:"هتتعلم إزاي تستخدم الـ AI عشان تسرع شغلك وتزود إنتاجيتك وتنجز مهام كانت بتاخد ساعات في دقائق."
+  },
+  {
+    id:"03",
+    title: "Huge Career Opportunities 💼",
+    desc:"المجال فاتح فرص كتير جدًا سواء AI Engineer أو Machine Learning Engineer أو Data Scientist أو AI Specialist."
+  },
+  {
+    id:"04",
+    title: "Build Real Projects",
+    desc: "هتشتغل على مشاريع حقيقية تطبق فيها كل اللي اتعلمته.",
+  },
+  {
+    id:"05",
+    title: "Freelancing Opportunities 🌍",
+    desc:"تقدر تستخدم مهاراتك في تنفيذ مشاريع AI للعملاء والشركات حول العالم."
+  },
+  {
+    id:"06",
+    title: " Technology Of The Future 🔥",
+    desc:"الـ AI مش مجرد مجال جديد، ده مستقبل التكنولوجيا كله تقريبًا."
+  },
+]
 
 const courseTopics = [
   {
-    num: "01",
-    title: "C++",
-    desc: "Learn the fundamentals of C++ programming, syntax, variables, functions, and problem-solving techniques.",
+    icon: <Sigma size={30} />,
+    title: "Mathematics For Data Science",
+    desc: "Build a strong foundation in linear algebra, statistics, and probability to understand how data science algorithms work under the hood.",
   },
   {
-    num: "02",
-    title: "Problem Solving",
-    desc: "Develop logical thinking skills and solve programming challenges using efficient approaches and algorithms.",
+    icon: <img width={30} height={30} src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />,
+    title: "Python For Data Science",
+    desc: "Learn Python programming from scratch and use powerful libraries like NumPy and Pandas to analyze and manipulate data efficiently.",
   },
   {
-    num: "03",
-    title: "OOP",
-    desc: "Understand Object-Oriented Programming concepts like classes, objects, inheritance, and polymorphism.",
+    icon: <img width={30} height={30} src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" />,
+    title: "SQL",
+    desc: "Master relational databases, SQL queries, joins, filtering, and aggregation to extract meaningful insights from structured data.",
   },
   {
-    num: "04",
-    title: "Data Structures",
-    desc: "Learn how to organize and manage data efficiently using arrays, linked lists, stacks, queues, and trees.",
+    icon: <SlidersHorizontal size={30} />,
+    title: "Data Preprocessing",
+    desc: "Learn how to clean, transform, and prepare raw data by handling missing values, outliers, and inconsistencies.",
   },
   {
-    num: "05",
-    title: "Algorithms",
-    desc: "Study searching, sorting, recursion, and optimization techniques to write efficient and scalable code.",
+    icon: <BarChart3 size={30} />,
+    title: "Data Visualization",
+    desc: "Create powerful charts and dashboards using tools like Power BI and Matplotlib to communicate insights clearly and effectively.",
   },
   {
-    num: "06",
-    title: "Database",
-    desc: "Understand database fundamentals, SQL queries, relationships, and how to manage structured data effectively.",
+    icon: <Bot size={30} />,
+    title: "Machine Learning",
+    desc: "Understand core ML concepts and build predictive models using supervised and unsupervised learning techniques.",
   },
   {
-    num: "07",
-    title: "Design Patterns",
-    desc: "Learn reusable software design solutions that help build clean, maintainable, and scalable applications.",
+    icon: <Network size={30} />,
+    title: "Deep Learning",
+    desc: "Dive into neural networks, CNNs, and RNNs to solve complex problems like image and sequence recognition.",
   },
   {
-    num: "08",
-    title: "Debugging Techniques",
-    desc: "Master debugging strategies and tools to identify, analyze, and fix errors efficiently in your code.",
+    icon: <MessageSquareCode size={30} />,
+    title: "NLP",
+    desc: "Explore Natural Language Processing to analyze, understand, and generate human language using AI techniques.",
   },
   {
-    num: "09",
-    title: "Build Mini Projects",
-    desc: "Apply your knowledge by building real-world mini projects to strengthen your practical programming skills.",
-  },
-];
-
-const testimonials = [
-  {
-    id:1,
-    name: "نوال السيد",
-    text: " بصراحه محتوى الكورس كان كويس اوى وفرق معايا كتير خصوصا التطبيق العملى وال Projects اللى اشتغلنا عليها..اتعلمنا نحلل الداتا اللى موجوده ب استخدام tools كتير ومختلفه وبتسهل علينا فهم الداتا وكتابة التقرير ف الاخر. بالنسبه للانستراكتور ف كان شرحه كويس وكان بيطبق معانا عملى ودا كان أفضل جزء وطبعا ارشح كورسات كيان كلها ل أى حد عموما 😍💜",
-    image: opinion,
+    icon: <Eye size={30} />,
+    title: "Computer Vision",
+    desc: "Teach machines to interpret images and videos using techniques like object detection and image classification.",
   },
   {
-    id:2,
-    name: "رويدا سمير العناني",
-    text: "المكان كويس جدا واول مره روحت شوفت  المعامله وكانت كويسه جدا حتى طريقه الدفع بجد مش حاسه بالضغط ودي اكتر نقطه كنت قلقانه منها اوى اوىبس بجد المكان كويس والمعامله والناس ونضافه المكان بالنسبه لشرح البشمهندس معانا  بجد شرحه كويس جدا جدا وبيبسط الشرح بطريقه كويسه اوى واي حد بيغلط مبيزهقش وبيفضل معانا ف هو بصراحه مشاء الله عليه احسن من ميت دكتور جامعه 😂 وانى ارشح المكان لحد اكيد طبعا اى حد هيجى هيتعلم وهيفهم وهيبقى فاهم المجال كويس ❤️",
-    image: opinion3,
+    icon: <Sparkles size={30} />,
+    title: "Generative AI",
+    desc: "Learn how modern AI models generate text, images, and content using transformers and large language models.",
   },
   {
-    id:3,
-    name: "عبدالسلام محمد عبدالسلام",
-    text: "في مكان اسمه كيان بدأت الحكاية خطوة جديدة وحلم جوايا علم وخبرة في كل ثانية وطريق واضح للي جاي قدّاميا كورس داتا… مش بس كلام ده فهم وعلم ونظام تمام من أول خطوة لحد النهاية وأنا ماشي بثقة في كل بداية والفضل يرجع لمدرب مميز المهندس أحمد مادح، علمه محفّز بأسلوب سهل وقلب صبور يوصل المعلومة بكل سرور والأوبريشن دايمًا في تنظيم متابعة ودعم بشكل عظيم كل حاجة ماشية بحساب وده اللي يخلّي المكان ليه طابع خاص في كيان اتعلمت أكون أفهم وأحلل وأشوف الكون ولو حد بيسأل أروح فين هقول كيان… من غير نقاش",
-    image: opinion4,
+    icon: <Cpu size={30} />,
+    title: "AI Agents",
+    desc: "Build autonomous AI systems that can reason, plan, and perform tasks with minimal human intervention.",
   },
   {
-    id:4,
-    name: "سارة شحاتة عبدالعظيم",
-    text: "الكورس جميل جداً كل حاجة مدروسة وتحفة واكيد ارشح أنه ياخد الكورس في كيان",
-    image: opinion2,
+    icon: <Cloud size={30} />,
+    title: "Microsoft Azure",
+    desc: "Understand cloud computing fundamentals and deploy AI and data solutions using Microsoft Azure services.",
   },
   {
-    id:5,
-    name: "عمر اشرف محمد محمد",
-    text: "الكورس كويس وبشمهندس احمد شرحه حلو وكيان رقم واحد ف الزقازيق",
-    image: opinion5,
+    icon: <Rocket size={30} />,
+    title: "Real World AI Applications",
+    desc: "Apply everything you learned by building real-world AI projects and production-ready applications.",
   },
-  {
-    id:6,
-    name: "محمد صلاح",
-    text: "ممتاز خصوصا مع بشمهندس احمد مادح وشكرا جدا لمتابعتكم معانا طول فترة الكورس",
-    image: opinion6,
-  },
-  {
-    id:7,
-    name: "بسنت سامي حمدي محمد",
-    text: "الكورس جميل جدا واستفادة كتير بصراحه وانتو من احسن الناس الي تعملت معاها  والمكان جميل  بصراحه",
-    image: opinion7,
-  },
-  {
-    id:8,
-    name: "نورهان محمد سعد",
-    text: "الكورس كويس جداً وكل حاجه مدروسه وتحفه واكيد ارشح انو ياخدوا الكورس ف كيان 😍",
-    image: opinion8,
-  },
-  {
-    id:9,
-    name: "ابراهيم محمد ابراهيم",
-    text: "بصراحه كل حاجه تمام والبشمهندس احمد مادح شرحو حلو والمعامله حلوه  والمكان كويس",
-    image: opinion9,
-  },
-];
-
-const stats = [
-  { value: "+5000", label: "طالب" },
-  { value: "+120", label: "ساعة محتوى" },
-  { value: "+15", label: "مشروع عملي" },
-  { value: "98%", label: "نسبة الرضا" },
 ];
 
 const projects = [
@@ -166,147 +167,21 @@ const projects = [
   { id: 3, img: mainImageProject_3, subImages: [{ id: 1, subImage: subImageProject_3 }] },
 ];
 
-function SectionHeader({
-  tag,
-  title,
-  subtitle,
-}: {
-  tag?: string;
-  title: string;
-  subtitle?: string;
-}) {
-  return (
-    <div className="text-center mb-16">
-      {tag ? (
-        <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary-glow text-xs font-semibold tracking-wider uppercase mb-5">
-          {tag}
-        </span>
-      ) : (
-        ""
-      )}
-
-      <h2 className="text-3xl md:text-4xl font-black mb-4 text-foreground tracking-tight">
-        {title}
-      </h2>
-      {subtitle && <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{subtitle}</p>}
-    </div>
-  );
-}
-
-function Section({
-  children,
-  className = "",
-  id,
-}: {
-  children: React.ReactNode;
-  className?: string;
-  id?: string;
-}) {
-  return (
-    <section id={id} className={`py-24 px-4 scroll-mt-20 ${className}`}>
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6 }}
-      >
-        {children}
-      </motion.div>
-    </section>
-  );
-}
-
 export default function Index() {
   return (
     <main className="min-h-screen bg-background overflow-x-hidden">
       <WhatsAppButton />
 
       {/* HERO */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden bg-gradient-hero">
-        <div className="absolute inset-0 bg-gradient-mesh" />
-        <div className="absolute inset-0 grid-pattern opacity-40" />
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-primary/20 blur-[120px]" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-accent/15 blur-[120px]" />
-
-        <div className="relative z-10 text-center max-w-4xl mx-auto py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-          >
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/40 backdrop-blur-md border border-border text-md font-medium text-foreground mb-8">
-              <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-              خصم لفترة محدودة على دبلومة الـ AI عدد ساعات الكورس +120
-            </span>
-            <h1
-              className="text-[31px] md:text-7xl lg:text-[70px] font-black mb-6 leading-[1.1] tracking-tight"
-              style={{ lineHeight: "1.5" }}
-            >
-              <span className="text-foreground">Learn AI From Zero To Hero</span>{" "}
-              {/* <span className="text-gradient">Data Analysis</span> */}
-              {/* <br /> */}
-              {/* <span className="text-foreground">من الصفر</span> */}
-            </h1>
-            <p className="text-lg md:text-2xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
-              ابدأ رحلتك في عالم البرمجة من الصفر، وافهم أساسيات البرمجة بطريقة عملية وسهلة تؤهلك
-              لأي مجال بعد كده{" "}
-            </p>
-            <div className="flex items-center justify-center gap-4 flex-wrap">
-              <SubscribeButton size="lg" />
-              <a
-                href="#content"
-                className="px-8 py-4 rounded-full border border-border bg-card/30 backdrop-blur-md text-foreground hover:bg-card/60 transition-all font-semibold"
-              >
-                استكشف المحتوى
-              </a>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 max-w-3xl mx-auto">
-              {stats.map((s, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 + i * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="text-3xl md:text-4xl font-black text-gradient mb-1">
-                    {s.value}
-                  </div>
-                  <div className="text-xs md:text-sm text-muted-foreground uppercase tracking-wider">
-                    {s.label}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
+      <Hero/>
+      {/* Features */}
+      <Features/>
       {/* Why Start With Programming Fundamentals? */}
       <Section className="bg-card/20">
         <div className="max-w-6xl mx-auto">
           <SectionHeader title="? Why Start With Programming Fundamentals" subtitle="" />
           <div className="grid md:grid-cols-2 gap-6 mb-14" dir="ltr">
-            {[
-              {
-                title: "Learn Problem Solving",
-                desc: " . اتعلم إزاي تفكر كمبرمج وتحلل أي مشكلة بخطوات واضحة ومنظمة",
-              },
-              {
-                title: "Build Strong Basics",
-                desc: "أساس قوى يخليك تدخل بعدة أى مجال زى الويب أو الموبايل أو الذكاء الإصطناعى أو الأمن السيبرانى أو أى مجال تانى من مجالات البرمجة",
-              },
-              {
-                title: "Start Your Tech Career",
-                desc: " . البرمجة بقت من أهم المهارات المطلوبة في كل المجالات والشركات",
-              },
-              {
-                title: "Practical Learning",
-                desc: " . هتتعلم من خلال تطبيقات وتمارين عملية مش مجرد شرح نظري",
-              },
-            ].map((item, i) => (
+            {whyLearn.map((item, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
@@ -316,7 +191,7 @@ export default function Index() {
                 className="bg-gradient-card backdrop-blur-sm border border-border rounded-2xl p-7 shadow-soft hover:border-primary/40 transition-all"
               >
                 <h3 className="text-xl font-bold mb-2 text-foreground">{item.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed text-left" dir="rtl">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -342,12 +217,14 @@ export default function Index() {
                 className="group bg-gradient-card backdrop-blur-sm border border-border rounded-2xl p-7 hover:border-primary/40 transition-all shadow-soft"
               >
                 <div className="text-sm font-mono text-primary-glow mb-4 tracking-wider">
-                  {t.num}
+                  {t.icon}
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary-glow transition-colors">
                   {t.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{t.desc}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {t.desc}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -356,6 +233,16 @@ export default function Index() {
           </div>
         </div>
       </Section>
+      {/* TOOLS */}
+      <Tools/>
+      {/* PROJECT WILL YOU BUILD */}
+      <ProjectWillBuild />
+      {/* CAREER OPPORTUNITIES */}
+      <Career />
+      {/* WHO IS THIS FOR */}
+      <WhoIsThisFor />
+      {/* TESTIMONIALS */}
+      <Testimonials />
 
       {/* PROJECTS */}
       <Section className="bg-card/20">
@@ -377,42 +264,6 @@ export default function Index() {
                 className="group relative overflow-hidden rounded-2xl border border-border shadow-elegant bg-card"
               >
                 <Projects project={project} />
-              </motion.div>
-            ))}
-          </div>
-          <div className="text-center">
-            <SubscribeButton />
-          </div>
-        </div>
-      </Section>
-
-      {/* TESTIMONIALS */}
-      <Section>
-        <div className="max-w-6xl mx-auto">
-          <SectionHeader
-            tag="Student Reviews"
-            title="Real feedback from our students during their learning journey"
-          />
-          <div className="grid md:grid-cols-3 gap-6 mb-14">
-            {testimonials.map((t, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="bg-gradient-card backdrop-blur-sm border border-border rounded-2xl p-7 shadow-soft"
-              >
-                <div className="text-accent text-lg mb-4 tracking-widest">★★★★★</div>
-                <p className="text-foreground/85 mb-6 leading-relaxed text-sm">"{t.text}"</p>
-                <div className="flex items-center gap-3 pt-4 border-t border-border">
-                  <div className="w-11 h-11 rounded-full overflow-hidden">
-                    <img src={t.image} alt={t.name} />
-                  </div>
-                  <div>
-                    <div className="font-bold text-foreground text-sm">{t.name}</div>
-                  </div>
-                </div>
               </motion.div>
             ))}
           </div>
@@ -481,13 +332,13 @@ export default function Index() {
         </div>
       </Section>
       {/* Q & A */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden bg-gradient-hero">
+      <Section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden bg-gradient-hero">
         <div className="absolute inset-0 bg-gradient-mesh" />
         <div className="absolute inset-0 grid-pattern opacity-40" />
         <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-primary/20 blur-[120px]" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-accent/15 blur-[120px]" />
 
-        <div className="relative z-10 text-center max-w-4xl mx-auto py-20">
+        <div className="relative z-10 text-center max-w-5xl mx-auto py-20 pt-0 pb-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -509,7 +360,7 @@ export default function Index() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </Section>
       <Section className="bg-card/20">
         <div className="max-w-3xl mx-auto text-center">
           <motion.div
